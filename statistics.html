@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Statistics</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/dashboard">🚌 TransitPredict</a>
+                <a class="text-white" href="/dashboard">Dashboard</a>
+            </div>
+        </nav>
+        <main class="container py-5">
+            <h1>Delay Statistics</h1>
+            <p>Charts update from predictions stored in SQLite.</p>
+            <!-- Advanced Analytics KPI Cards -->
+
+<div class="row g-4 mb-4">
+
+    <div class="col-md-3">
+        <div class="analytics-kpi">
+            <div class="kpi-icon">🚌</div>
+            <div>
+                <span>TOTAL PREDICTIONS</span>
+                <h2 id="totalTrips">0</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="analytics-kpi">
+            <div class="kpi-icon">✅</div>
+            <div>
+                <span>ON-TIME RATE</span>
+                <h2 id="onTimeRate">0%</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="analytics-kpi">
+            <div class="kpi-icon">⏱️</div>
+            <div>
+                <span>AVERAGE DELAY</span>
+                <h2 id="avgDelay">0 min</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="analytics-kpi">
+            <div class="kpi-icon">⚠️</div>
+            <div>
+                <span>MAJOR DELAYS</span>
+                <h2 id="majorDelays">0</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-box">
+                        <h4>Status</h4>
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-box">
+                        <h4>Traffic</h4>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Advanced Analytics Charts -->
+
+<div class="row g-4 mt-2">
+
+    <div class="col-md-6">
+
+        <div class="card-box">
+
+            <h4>📈 Average Delay by Route</h4>
+
+            <p>
+                Compare average delay across different routes.
+            </p>
+
+            <div class="analytics-chart-container">
+
+                <canvas id="routeChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+
+        <div class="card-box">
+
+            <h4>🌦️ Weather Impact</h4>
+
+            <p>
+                Average delay under different weather conditions.
+            </p>
+
+            <div class="analytics-chart-container">
+
+                <canvas id="weatherChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Automatic Insight -->
+
+<div class="analytics-insight mt-4">
+
+    <div class="insight-icon">
+        💡
+    </div>
+
+    <div>
+
+        <h4>Transport Intelligence</h4>
+
+        <p id="insightText">
+            Analysing prediction patterns...
+        </p>
+
+    </div>
+
+</div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{{url_for('static',filename='script.js')}}"></script>
+    </body>
+    </html>

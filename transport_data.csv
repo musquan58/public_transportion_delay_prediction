@@ -1,0 +1,12 @@
+route,source,destination,hour,traffic,weather,delay
+101,Central,Airport,8,High,Clear,22
+101,Central,Airport,9,High,Rainy,30
+202,Market,University,8,Medium,Clear,13
+202,Market,University,19,High,Rainy,29
+303,Station,Tech Park,10,Low,Clear,5
+303,Station,Tech Park,18,Medium,Cloudy,16
+404,Bus Stand,Hospital,7,High,Rainy,27
+404,Bus Stand,Hospital,14,Low,Clear,4
+505,College,City Center,17,High,Clear,23
+505,College,City Center,20,High,Rainy,34
+606,Airport,Railway Station,11,Medium,Cloudy,12

@@ -1,0 +1,1380 @@
+body{
+    background:#f4f7fb;
+    color:#172033;
+    font-family:Arial,sans-serif
+}
+.login{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#172554,#2563eb)
+}
+.login-box{
+    background:white;
+    padding:38px;
+    border-radius:22px;
+    width:390px;
+    max-width:92%;
+    text-align:center;
+    box-shadow:0 20px 60px #0004
+}
+.logo{
+    font-size:55px
+}
+.login-box h2{
+    font-weight:800
+}
+.login-box small{
+    display:block;
+    margin-top:18px;
+    color:#667085
+}.hero
+{
+    background:linear-gradient(135deg,#1d4ed8,#0f766e);
+    color:white;border-radius:24px;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.hero h1{
+    font-size:38px
+}
+.bus{
+    font-size:100px
+}
+.eyebrow{
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:bold
+}
+.card-box{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 5px 20px #17203312;
+    border:1px solid #e8ebf1
+}
+.delay{
+    font-size:70px;
+    font-weight:800;
+    color:#2563eb
+}
+.result{
+    text-align:center
+}
+.result h2{
+    margin-top:10px
+}
+@media(max-width:700px){
+    .hero h1{font-size:28px}.bus{display:none}}
+.login-links{margin-top:18px;font-size:14px}
+.login-links a{color:#2563eb;text-decoration:none;font-weight:600}
+.login-links a:hover{text-decoration:underline}
+.login-links span{color:#98a2b3;margin:0 5px}
+/* =========================================
+   EXPLAINABLE PREDICTION RESULT
+========================================= */
+
+.prediction-result {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.10);
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.prediction-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.result-label {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+}
+
+
+.result-icon {
+
+    font-size: 55px;
+
+}
+
+
+.delay-display {
+
+    text-align: center;
+
+    padding: 25px 0;
+
+}
+
+
+.delay-display p {
+
+    color: #667085;
+
+    margin-bottom: 0;
+
+}
+
+
+.delay-number {
+
+    font-size: 70px;
+
+    font-weight: 800;
+
+    color: #2563eb;
+
+}
+
+
+.delay-number small {
+
+    font-size: 24px;
+
+    color: #667085;
+
+}
+
+
+.status-badge {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+}
+
+
+.explanation-text {
+
+    color: #667085;
+
+}
+
+
+/* Factor list */
+
+.factor-list {
+
+    margin-top: 15px;
+
+}
+
+
+.factor-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.factor-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.factor-icon {
+
+    font-size: 24px;
+
+}
+
+
+.factor-item strong {
+
+    color: #dc2626;
+
+}
+
+
+/* Recommendation */
+
+.recommendation-box {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 10px;
+
+}
+
+
+.recommendation-box p {
+
+    margin: 5px 0 0;
+
+    color: #475467;
+
+}
+
+/* =====================================
+   ADVANCED ANALYTICS
+===================================== */
+
+.analytics-kpi {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+
+.analytics-kpi:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+.analytics-kpi .kpi-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #eff6ff;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+}
+
+
+.analytics-kpi span {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #667085;
+
+}
+
+
+.analytics-kpi h2 {
+
+    margin: 5px 0 0;
+
+    color: #2563eb;
+
+    font-weight: 800;
+
+}
+
+
+.analytics-chart-container {
+
+    position: relative;
+
+    height: 280px;
+
+}
+
+
+.analytics-insight {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+}
+
+
+.insight-icon {
+
+    font-size: 32px;
+
+}
+
+
+.analytics-insight h4 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.analytics-insight p {
+
+    margin: 0;
+
+    color: #475467;
+
+}
+/* =========================================
+   ALTERNATIVE ROUTE RECOMMENDATION
+========================================= */
+
+.alternative-routes {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+}
+
+
+.alternative-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-label {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #2563eb;
+
+}
+
+
+.alternative-header h2 {
+
+    margin: 5px 0;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+
+.alternative-header p {
+
+    margin: 0;
+
+    color: #667085;
+
+}
+
+
+.route-icon {
+
+    font-size: 50px;
+
+}
+
+
+/* ROUTE CARD */
+
+.route-option {
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    margin-bottom: 16px;
+
+    transition: 0.25s;
+
+}
+
+
+.route-option:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+
+/* Recommended route */
+
+.route-option.recommended {
+
+    border-left: 5px solid #16a34a;
+
+    background: #f6fff8;
+
+}
+
+
+.route-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.route-number {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #667085;
+
+    letter-spacing: 1px;
+
+}
+
+
+.route-top h3 {
+
+    margin: 5px 0 0;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+/* BADGES */
+
+.route-badge {
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.route-badge.low {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+
+.route-badge.medium {
+
+    background: #fef3c7;
+
+    color: #a16207;
+
+}
+
+
+/* DETAILS */
+
+.route-details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+
+.route-details span {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #667085;
+
+}
+
+
+.route-details strong {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 18px;
+
+}
+
+
+.route-details .saved {
+
+    color: #16a34a;
+
+}
+
+
+/* RECOMMENDED LABEL */
+
+.route-recommendation {
+
+    margin-top: 18px;
+
+    padding: 10px 14px;
+
+    background: #ecfdf3;
+
+    color: #15803d;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* FINAL RECOMMENDATION */
+
+.best-route {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+}
+
+
+.best-route-icon {
+
+    font-size: 32px;
+
+}
+
+
+.best-route h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 18px;
+
+}
+
+
+.best-route p {
+
+    margin: 0;
+
+    color: #475467;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .route-details {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .alternative-header {
+
+        align-items: flex-start;
+
+    }
+
+    .route-icon {
+
+        font-size: 35px;
+
+    }
+
+}
+
+/* ===============================
+   ROUTE VISUALIZATION
+================================ */
+
+.route-visualization {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 25px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.route-visual-header {
+    margin-bottom: 20px;
+}
+
+.route-visual-header h2 {
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.route-visual-header p {
+    margin: 0;
+    color: #667085;
+}
+
+.route-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eff6ff;
+    padding: 15px 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.route-info strong {
+    font-size: 18px;
+    color: #1d4ed8;
+}
+
+.route-info span {
+    color: #667085;
+    font-size: 13px;
+}
+
+.route-map {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.route-line {
+    position: absolute;
+    left: 31px;
+    top: 25px;
+    bottom: 25px;
+    width: 4px;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.route-stop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.route-stop:last-child {
+    margin-bottom: 0;
+}
+
+.stop-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #2563eb;
+    flex-shrink: 0;
+}
+
+.stop-circle.start {
+    border-color: #16a34a;
+}
+
+.stop-circle.end {
+    border-color: #dc2626;
+}
+
+.route-stop strong {
+    display: block;
+    font-size: 16px;
+}
+
+.route-stop span {
+    display: block;
+    color: #667085;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.route-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.route-summary div {
+    text-align: center;
+}
+
+.route-summary span {
+    display: block;
+    color: #667085;
+    font-size: 12px;
+}
+
+.route-summary strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .route-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===============================
+   ROUTE SEARCH
+================================ */
+
+.route-search {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.route-search label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.route-search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.route-search-box input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.route-search-box input:focus {
+    border-color: #2563eb;
+}
+
+.route-search-box button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.route-search-box button:hover {
+    background: #1d4ed8;
+}
+
+.route-search small {
+    display: block;
+    margin-top: 8px;
+    color: #667085;
+}
+
+@media (max-width: 600px) {
+    .route-search-box {
+        flex-direction: column;
+    }
+
+    .route-search-box button {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SAFE DARK MODE
+   ========================= */
+
+body.dark-mode {
+    background-color: #111827 !important;
+    color: #f9fafb !important;
+}
+
+/* Main page */
+body.dark-mode main {
+    color: #f9fafb;
+}
+
+/* Headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f9fafb !important;
+}
+
+/* Paragraphs */
+body.dark-mode p {
+    color: #d1d5db !important;
+}
+
+/* Dashboard cards */
+body.dark-mode .card {
+    background-color: #1f2937 !important;
+    color: #f9fafb !important;
+    border-color: #374151 !important;
+}
+
+/* Any white dashboard boxes */
+body.dark-mode .dashboard-card {
+    background-color: #1f2937 !important;
+    color: #f9fafb !important;
+}
+
+/* Labels */
+body.dark-mode label {
+    color: #e5e7eb !important;
+}
+
+/* Inputs */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #111827 !important;
+    color: #f9fafb !important;
+    border-color: #4b5563 !important;
+}
+
+/* Input placeholder */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #ffffff;
+}
+
+/* Keep navbar visible */
+body.dark-mode .navbar {
+    color: white !important;
+}
+
+/* Dark mode button */
+.dark-mode-btn {
+    border: 1px solid rgba(255,255,255,0.5);
+    background: transparent;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dark-mode-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* Dashboard Dark Mode Fix */
+
+body.dark-mode .card-box {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .card-box h3,
+body.dark-mode .card-box h5 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card-box p {
+    color: #d1d5db !important;
+}
+
+/* Recent predictions */
+body.dark-mode .recent-box {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .recent-box th {
+    color: #ffffff !important;
+}
+
+body.dark-mode .recent-box td {
+    color: #e5e7eb !important;
+}
+
+/* Fix Make Prediction button in dark mode */
+
+body.dark-mode .btn-light {
+    background: #ffffff !important;
+    color: #2563eb !important;
+    border-color: #ffffff !important;
+}
+
+body.dark-mode .btn-light:hover {
+    background: #e5e7eb !important;
+    color: #1d4ed8 !important;
+}
+
+/* =====================================================
+   DARK MODE - PREDICTION PAGE FIX
+   ===================================================== */
+
+body.dark-mode {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+/* Main headings and normal text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #f8fafc !important;
+}
+
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode span {
+    color: #cbd5e1;
+}
+
+/* Prediction form/card */
+body.dark-mode .card,
+body.dark-mode .prediction-card,
+body.dark-mode .prediction-form,
+body.dark-mode .form-card {
+    background: #172033 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* Form labels */
+body.dark-mode .form-label,
+body.dark-mode label {
+    color: #f8fafc !important;
+}
+
+/* Input boxes */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+/* Input placeholder */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Route Visualization */
+body.dark-mode .route-visualization,
+body.dark-mode .route-section,
+body.dark-mode .route-container,
+body.dark-mode .route-card {
+    background: #172033 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* Route visualization heading */
+body.dark-mode .route-visualization h2,
+body.dark-mode .route-visualization h3,
+body.dark-mode .route-section h2,
+body.dark-mode .route-section h3 {
+    color: #f8fafc !important;
+}
+
+/* Route visualization normal text */
+body.dark-mode .route-visualization p,
+body.dark-mode .route-section p {
+    color: #cbd5e1 !important;
+}
+
+/* Route names */
+body.dark-mode .route-visualization strong,
+body.dark-mode .route-section strong {
+    color: #f8fafc !important;
+}
+
+/* Route input area */
+body.dark-mode .route-input,
+body.dark-mode .route-input-section {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+/* Prediction result */
+body.dark-mode .prediction-result {
+    background: #172033 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .prediction-result h2,
+body.dark-mode .prediction-result h3,
+body.dark-mode .prediction-result h4 {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .prediction-result p {
+    color: #cbd5e1 !important;
+}
+
+/* Recommendation box */
+body.dark-mode .recommendation-box {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode .recommendation-box strong,
+body.dark-mode .recommendation-box p {
+    color: #f8fafc !important;
+}
+
+/* Alternative routes */
+body.dark-mode .alternative-routes {
+    background: #172033 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .route-option {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode .route-option h3,
+body.dark-mode .route-option strong {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .route-option span {
+    color: #cbd5e1 !important;
+}
+
+/* Best alternative */
+body.dark-mode .best-route {
+    background: #172554 !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .best-route h3,
+body.dark-mode .best-route p {
+    color: #f8fafc !important;
+}
+
+/* Make Prediction button */
+body.dark-mode .btn-light {
+    background: #ffffff !important;
+    color: #2563eb !important;
+    border-color: #ffffff !important;
+}
+
+body.dark-mode .btn-light:hover {
+    background: #e2e8f0 !important;
+    color: #1d4ed8 !important;
+}
+
+/* Fix route header in dark mode */
+body.dark-mode .route-header {
+    background: #1e3a8a !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .route-header h3,
+body.dark-mode .route-header h4,
+body.dark-mode .route-header strong,
+body.dark-mode .route-header span,
+body.dark-mode .route-header p {
+    color: #ffffff !important;
+}
+
+/* If route header uses a generic light background */
+body.dark-mode .route-title {
+    color: #ffffff !important;
+}
+
+body.dark-mode .route-subtitle {
+    color: #cbd5e1 !important;
+}
+
+/* Fix Route Info box in Dark Mode */
+body.dark-mode .route-info {
+    background: #1e3a8a !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .route-info strong,
+body.dark-mode .route-info span {
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   DARK MODE - STATISTICS PAGE FIX
+   ===================================================== */
+
+/* KPI cards */
+body.dark-mode .card {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* KPI card headings and values */
+body.dark-mode .card h1,
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .card h4,
+body.dark-mode .card h5,
+body.dark-mode .card h6 {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .card p {
+    color: #cbd5e1 !important;
+}
+
+/* Statistics KPI labels */
+body.dark-mode .stat-card,
+body.dark-mode .kpi-card {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .stat-card h3,
+body.dark-mode .stat-card h4,
+body.dark-mode .stat-card strong,
+body.dark-mode .kpi-card h3,
+body.dark-mode .kpi-card h4,
+body.dark-mode .kpi-card strong {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .stat-card p,
+body.dark-mode .kpi-card p {
+    color: #cbd5e1 !important;
+}
+
+/* KPI numbers */
+body.dark-mode .stat-card .value,
+body.dark-mode .kpi-card .value {
+    color: #ffffff !important;
+}
+
+/* Transport Intelligence / Insight box */
+body.dark-mode .insight-box,
+body.dark-mode .transport-intelligence {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #3b82f6 !important;
+}
+
+body.dark-mode .insight-box h3,
+body.dark-mode .insight-box h4,
+body.dark-mode .insight-box p,
+body.dark-mode .transport-intelligence h3,
+body.dark-mode .transport-intelligence h4,
+body.dark-mode .transport-intelligence p {
+    color: #f8fafc !important;
+}
+
+/* General statistics text */
+body.dark-mode .statistics-page h1,
+body.dark-mode .statistics-page h2,
+body.dark-mode .statistics-page h3 {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .statistics-page p {
+    color: #cbd5e1 !important;
+}
+/* ================================
+   DARK MODE - STATISTICS PAGE
+   ================================ */
+
+body.dark-mode .analytics-kpi {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #334155 !important;
+}
+
+body.dark-mode .analytics-kpi span {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .analytics-kpi h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .kpi-icon {
+    background: #334155 !important;
+}
+
+body.dark-mode .card-box {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-mode .card-box h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card-box p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .analytics-insight {
+    background: #1e293b !important;
+    color: #ffffff !important;
+    border-left: 5px solid #2563eb !important;
+}
+
+body.dark-mode .analytics-insight h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .analytics-insight p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .insight-icon {
+    color: #fbbf24 !important;
+}

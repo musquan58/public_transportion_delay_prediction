@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Predict Delay</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/dashboard">🚌 TransitPredict</a>
+                <a class="text-white" href="/dashboard">Dashboard</a>
+            </div>
+        </nav>
+        <main class="container py-5">
+            <h1>Predict Transport Delay</h1>
+            <p>Enter journey conditions.</p>
+            <div class="card-box">
+                <form id="predictForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Route</label>
+                            <select name="route" class="form-select">
+                                <option>101</option>
+                                <option>202</option>
+                                <option>303</option>
+                                <option>404</option>
+                                <option>505</option>
+                                <option>606</option>
+                            </select></div><div class="col-md-6">
+                                <label>Departure Hour (0-23)</label>
+                                <input name="hour" type="number" min="0" max="23" value="8" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Source</label>
+                                <input name="source" class="form-control" placeholder="Central" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Destination</label>
+                                <input name="destination" class="form-control" placeholder="Airport" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Traffic</label>
+                                <select name="traffic" class="form-select">
+                                    <option>Low</option><option selected>Medium</option><option>High</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Weather</label>
+                                <select name="weather" class="form-select">
+                                    <option>Clear</option><option>Cloudy</option><option>Rainy</option><option>Storm</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-4">🔮 Predict Delay</button>
+                    </form>
+                </div>
+                <div id="result" class="prediction-result d-none mt-4">
+
+    <div class="prediction-header">
+
+        <div>
+            <p class="result-label">PREDICTION RESULT</p>
+
+            <h2 id="resultRoute">ROUTE 101</h2>
+
+            <p id="resultJourney">Central → Airport</p>
+        </div>
+
+        <div class="result-icon">
+            🚌
+        </div>
+
+    </div>
+
+    <div class="delay-display">
+
+        <p>Predicted Delay</p>
+
+        <div class="delay-number">
+            <span id="delay">0</span>
+            <small>min</small>
+        </div>
+
+        <div id="status" class="status-badge">
+            On Time
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h4>🔍 Why is the bus delayed?</h4>
+
+    <p class="explanation-text">
+        The prediction is based on the following factors:
+    </p>
+
+    <div id="factorList" class="factor-list">
+        <!-- Factors will appear here -->
+    </div>
+
+    <div class="recommendation-box">
+
+        <strong>💡 Recommendation</strong>
+
+        <p id="recommendation">
+            Consider traveling outside peak hours.
+        </p>
+
+    </div>
+    <!-- =====================================
+     ALTERNATIVE ROUTE RECOMMENDATION
+===================================== -->
+
+<div class="alternative-routes mt-4">
+
+    <div class="alternative-header">
+
+        <div>
+            <span class="section-label">
+                SMART ROUTE PLANNER
+            </span>
+
+            <h2>
+                🧭 Alternative Route Recommendation
+            </h2>
+
+            <p>
+                Compare alternative routes and choose
+                the option with lower expected delay.
+            </p>
+        </div>
+
+        <div class="route-icon">
+            🧭
+        </div>
+
+    </div>
+
+
+    <!-- Route Cards -->
+
+    <div class="route-options">
+
+
+        <!-- Route 202 -->
+
+        <div class="route-option recommended">
+
+            <div class="route-top">
+
+                <div>
+
+                    <span class="route-number">
+                        ROUTE 202
+                    </span>
+
+                    <h3>
+                        Central → University → Airport
+                    </h3>
+
+                </div>
+
+                <span class="route-badge low">
+                    LOW RISK
+                </span>
+
+            </div>
+
+
+            <div class="route-details">
+
+                <div>
+                    <span>Expected Delay</span>
+
+                    <strong>
+                        8 min
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>Risk Score</span>
+
+                    <strong>
+                        25/100
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>Time Saved</span>
+
+                    <strong class="saved">
+                        24 min
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="route-recommendation">
+
+                ⭐ Recommended alternative
+
+            </div>
+
+        </div>
+
+
+        <!-- Route 404 -->
+
+        <div class="route-option">
+
+            <div class="route-top">
+
+                <div>
+
+                    <span class="route-number">
+                        ROUTE 404
+                    </span>
+
+                    <h3>
+                        Central → Market → Airport
+                    </h3>
+
+                </div>
+
+                <span class="route-badge medium">
+                    MEDIUM RISK
+                </span>
+
+            </div>
+
+
+            <div class="route-details">
+
+                <div>
+                    <span>Expected Delay</span>
+
+                    <strong>
+                        14 min
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>Risk Score</span>
+
+                    <strong>
+                        48/100
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>Time Saved</span>
+
+                    <strong class="saved">
+                        18 min
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Final Recommendation -->
+
+    <div class="best-route">
+
+        <div class="best-route-icon">
+            💡
+        </div>
+
+        <div>
+
+            <h3>
+                Best Alternative: Route 202
+            </h3>
+
+            <p>
+                Route 202 has the lowest expected delay
+                among the available alternatives.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+<!-- Route Visualization -->
+<div class="route-visualization">
+
+    <div class="route-visual-header">
+        <span class="section-label">LIVE ROUTE VIEW</span>
+        <h2>🗺️ Route Visualization</h2>
+        <p>Visual representation of the selected transport route.</p>
+    </div>
+
+    <div class="route-info">
+        <strong id="visualRouteName">Route 101</strong>
+        <span>Predicted Route</span>
+    </div>
+
+    <div class="route-map">
+        <!-- Manual Route Search -->
+<div class="route-search">
+
+    <label for="routeNumberInput">
+        🚌 Enter Route Number
+    </label>
+
+    <div class="route-search-box">
+
+        <input
+            type="text"
+            id="routeNumberInput"
+            value="101"
+            placeholder="Example: 101"
+        >
+
+        <button type="button" onclick="showRouteVisualization()">
+            View Route
+        </button>
+
+    </div>
+
+    <small>
+        Enter a route number to view its stops.
+    </small>
+
+</div>
+
+        <div class="route-line"></div>
+
+        <div class="route-stop">
+            <div class="stop-circle start"></div>
+            <div>
+                <strong id="stop1">Central</strong>
+                <span>Starting Point</span>
+            </div>
+        </div>
+
+        <div class="route-stop">
+            <div class="stop-circle"></div>
+            <div>
+                <strong id="stop2">Market</strong>
+                <span>Bus Stop</span>
+            </div>
+        </div>
+
+        <div class="route-stop">
+            <div class="stop-circle"></div>
+            <div>
+                <strong id="stop3">University</strong>
+                <span>Bus Stop</span>
+            </div>
+        </div>
+
+        <div class="route-stop">
+            <div class="stop-circle end"></div>
+            <div>
+                <strong id="stop4">Airport</strong>
+                <span>Destination</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="route-summary">
+
+        <div>
+            <span>Route</span>
+            <strong id="visualRoute">101</strong>
+        </div>
+
+        <div>
+            <span>Stops</span>
+            <strong>4</strong>
+        </div>
+
+        <div>
+            <span>Direction</span>
+            <strong>→</strong>
+        </div>
+
+    </div>
+
+</div>
+                <h2 id="status"></h2>
+                <p id="reason"></p>
+               
+            </div>
+        </main>
+        <script src="{{url_for('static',filename='script.js')}}">
+
+        </script>
+        </body>
+        </html>
